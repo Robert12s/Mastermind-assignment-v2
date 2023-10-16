@@ -19,8 +19,15 @@ namespace Mastermind_v2
 
         private void MilitaryMastermind_Load(object sender, EventArgs e)
         {
+            string[] colourArray = { "red", "orange", "yellow", "green", "blue", "purple"};
+
+
 
         }
 
+        private void redDot_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

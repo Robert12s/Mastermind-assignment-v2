@@ -53,6 +53,8 @@
             this.redDot.Size = new System.Drawing.Size(57, 56);
             this.redDot.TabIndex = 0;
             this.redDot.TabStop = false;
+            this.redDot.UseWaitCursor = true;
+            this.redDot.Click += new System.EventHandler(this.redDot_Click);
             // 
             // orangeDot
             // 
@@ -64,6 +66,7 @@
             this.orangeDot.Size = new System.Drawing.Size(57, 56);
             this.orangeDot.TabIndex = 1;
             this.orangeDot.TabStop = false;
+            this.orangeDot.UseWaitCursor = true;
             // 
             // yellowDot
             // 
@@ -75,6 +78,7 @@
             this.yellowDot.Size = new System.Drawing.Size(57, 56);
             this.yellowDot.TabIndex = 2;
             this.yellowDot.TabStop = false;
+            this.yellowDot.UseWaitCursor = true;
             // 
             // greenDot
             // 
@@ -86,6 +90,7 @@
             this.greenDot.Size = new System.Drawing.Size(57, 56);
             this.greenDot.TabIndex = 3;
             this.greenDot.TabStop = false;
+            this.greenDot.UseWaitCursor = true;
             // 
             // blueDot
             // 
@@ -97,6 +102,7 @@
             this.blueDot.Size = new System.Drawing.Size(57, 56);
             this.blueDot.TabIndex = 4;
             this.blueDot.TabStop = false;
+            this.blueDot.UseWaitCursor = true;
             // 
             // purpleDot
             // 
@@ -108,6 +114,7 @@
             this.purpleDot.Size = new System.Drawing.Size(57, 56);
             this.purpleDot.TabIndex = 5;
             this.purpleDot.TabStop = false;
+            this.purpleDot.UseWaitCursor = true;
             // 
             // MilitaryMastermind
             // 
@@ -123,6 +130,7 @@
             this.Controls.Add(this.yellowDot);
             this.Controls.Add(this.orangeDot);
             this.Controls.Add(this.redDot);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MilitaryMastermind";
             this.Text = "Military Mastermind";
             this.UseWaitCursor = true;

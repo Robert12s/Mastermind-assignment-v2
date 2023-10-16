@@ -21,7 +21,10 @@ namespace Mastermind_v2
         {
             string[] colourArray = { "red", "orange", "yellow", "green", "blue", "purple"};
 
+        }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
 
         }
 
@@ -29,5 +32,7 @@ namespace Mastermind_v2
         {
 
         }
+
+
     }
 }

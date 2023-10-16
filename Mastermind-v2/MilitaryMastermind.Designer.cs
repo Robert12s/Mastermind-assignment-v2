@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MilitaryMastermind));
             this.redDot = new System.Windows.Forms.PictureBox();
             this.orangeDot = new System.Windows.Forms.PictureBox();
@@ -35,6 +36,9 @@
             this.greenDot = new System.Windows.Forms.PictureBox();
             this.blueDot = new System.Windows.Forms.PictureBox();
             this.purpleDot = new System.Windows.Forms.PictureBox();
+            this.timerBomb = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.redDot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orangeDot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.yellowDot)).BeginInit();
@@ -116,6 +120,21 @@
             this.purpleDot.TabStop = false;
             this.purpleDot.UseWaitCursor = true;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(251, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 20);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Seconds";
+            // 
             // MilitaryMastermind
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -124,6 +143,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(418, 784);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.timerBomb);
             this.Controls.Add(this.purpleDot);
             this.Controls.Add(this.blueDot);
             this.Controls.Add(this.greenDot);
@@ -142,6 +163,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.blueDot)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.purpleDot)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -153,6 +175,9 @@
         private System.Windows.Forms.PictureBox greenDot;
         private System.Windows.Forms.PictureBox blueDot;
         private System.Windows.Forms.PictureBox purpleDot;
+        private System.Windows.Forms.Label timerBomb;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

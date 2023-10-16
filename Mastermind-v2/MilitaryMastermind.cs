@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace Mastermind_v2
 {
-    public partial class Form1 : Form
+    public partial class MilitaryMastermind : Form
     {
-        public Form1()
+        public MilitaryMastermind()
         {
             InitializeComponent();
         }
+
+        private void MilitaryMastermind_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

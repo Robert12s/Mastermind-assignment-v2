@@ -18,10 +18,14 @@ namespace Mastermind_v2
         }
         private void startGame_Click(object sender, EventArgs e)
         {
-            MilitaryMastermind militaryMastermind = new MilitaryMastermind();
+            Military military = new Military();
             this.Hide();
-            militaryMastermind.ShowDialog();
-            this.Show();
+            military.Show();
+        }
+
+        private void Rules_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

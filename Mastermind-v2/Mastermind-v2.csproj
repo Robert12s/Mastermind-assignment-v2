@@ -52,6 +52,12 @@
     <Compile Include="gameOver.Designer.cs">
       <DependentUpon>gameOver.cs</DependentUpon>
     </Compile>
+    <Compile Include="Military.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Military.Designer.cs">
+      <DependentUpon>Military.cs</DependentUpon>
+    </Compile>
     <Compile Include="MilitaryMastermind.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     </Compile>
     <EmbeddedResource Include="gameOver.resx">
       <DependentUpon>gameOver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Military.resx">
+      <DependentUpon>Military.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MilitaryMastermind.resx">
       <DependentUpon>MilitaryMastermind.cs</DependentUpon>

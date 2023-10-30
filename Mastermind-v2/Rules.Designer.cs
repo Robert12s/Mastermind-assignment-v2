@@ -139,6 +139,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Rules";
             this.Text = "Rules";
+            this.Load += new System.EventHandler(this.Rules_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

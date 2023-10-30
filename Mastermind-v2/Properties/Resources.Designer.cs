@@ -63,6 +63,16 @@ namespace Mastermind_v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1000_F_563697722_eKkTmLTNSgw7ztdZpNZqiPF1EEoA4IBw {
+            get {
+                object obj = ResourceManager.GetObject("1000_F_563697722_eKkTmLTNSgw7ztdZpNZqiPF1EEoA4IBw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap blue_circle_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("blue-circle-removebg-preview", resourceCulture);
@@ -73,9 +83,29 @@ namespace Mastermind_v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ezgif_com_webp_to_png {
+            get {
+                object obj = ResourceManager.GetObject("ezgif.com-webp-to-png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap green_circle_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("green-circle-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mastermind_pic {
+            get {
+                object obj = ResourceManager.GetObject("mastermind-pic", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

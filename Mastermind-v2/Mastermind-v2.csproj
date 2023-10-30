@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="gameOver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gameOver.Designer.cs">
+      <DependentUpon>gameOver.cs</DependentUpon>
+    </Compile>
     <Compile Include="MilitaryMastermind.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     <Compile Include="Rules.Designer.cs">
       <DependentUpon>Rules.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="gameOver.resx">
+      <DependentUpon>gameOver.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MilitaryMastermind.resx">
       <DependentUpon>MilitaryMastermind.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,6 +118,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\red-circle-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1000_F_563697722_eKkTmLTNSgw7ztdZpNZqiPF1EEoA4IBw.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ezgif.com-webp-to-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mastermind-pic.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -18,9 +18,9 @@ namespace Mastermind_v2
         }
         private void startGame_Click(object sender, EventArgs e)
         {
-            MilitaryMastermind newform = new MilitaryMastermind();
+            MilitaryMastermind militaryMastermind = new MilitaryMastermind();
             this.Hide();
-            newform.ShowDialog();
+            militaryMastermind.ShowDialog();
             this.Show();
         }
     }

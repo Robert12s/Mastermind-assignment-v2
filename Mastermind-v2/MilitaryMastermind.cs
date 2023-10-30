@@ -22,9 +22,6 @@ namespace Mastermind_v2
 
            seconds = Convert.ToInt32(480);
            timer.Start();
-
-
-
         }
 
         private void MilitaryMastermind_Load(object sender, EventArgs e)

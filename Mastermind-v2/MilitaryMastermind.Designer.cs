@@ -149,7 +149,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BackgroundImage = global::Mastermind_v2.Properties.Resources.mastermind_pic;
+            this.BackgroundImage = global::Mastermind_v2.Properties.Resources.mastermind_pic1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(418, 784);
             this.Controls.Add(this.countdownTimer);

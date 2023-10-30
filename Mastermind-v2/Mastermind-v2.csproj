@@ -128,5 +128,11 @@
   <ItemGroup>
     <None Include="Resources\mastermind-pic.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mastermind-pic1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mastermind-pic2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -18,14 +18,12 @@ namespace Mastermind_v2
         {
             InitializeComponent();
         }
+        int timeleft = 20;
 
         private void Military_Load(object sender, EventArgs e)
         {
-            Timer MyTimer = new Timer();
-            MyTimer.Interval = (8 * 60 * 1000); // 8 mins
-            MyTimer.Tick += new EventHandler(timer_Tick);
-            MyTimer.Start();
-
+            timer.Start();
+            countdownTimer.Text = timeleft.ToString();
             string[] colourArray = { "red", "orange", "yellow", "green", "blue", "purple" };
             Random rondo = new Random();
             string[] answer = new string[5];
@@ -42,10 +40,20 @@ namespace Mastermind_v2
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            MessageBox.Show("The form will now be closed.", "Time Elapsed");
-            gameOver newform = new gameOver();
-            this.Close();
-            newform.ShowDialog();
+            if(timeleft > 0)
+            {
+                timeleft = timeleft - 1;
+                countdownTimer.Text = timeleft.ToString();
+                gameOver newform = new gameOver();
+                this.Close();
+                newform.ShowDialog();
+
+            }
+            else
+            {
+                timer.Stop();
+                Enabled = false;
+            }
             
         }
     }

@@ -60,7 +60,9 @@
             // timer
             // 
             this.timer.Enabled = true;
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.timer.Interval = 1000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // purpleDot
             // 
@@ -148,9 +150,11 @@
             this.Controls.Add(this.orangeDot);
             this.Controls.Add(this.redDot);
             this.Controls.Add(this.countdownTimer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Military";
             this.Text = "Military";
+            this.Load += new System.EventHandler(this.Military_Load);
             ((System.ComponentModel.ISupportInitialize)(this.purpleDot)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.blueDot)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.greenDot)).EndInit();

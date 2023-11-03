@@ -64,6 +64,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gameDone);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "gameOver";
             this.Text = "Game Over";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

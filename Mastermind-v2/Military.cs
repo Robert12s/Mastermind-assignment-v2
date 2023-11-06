@@ -133,5 +133,10 @@ namespace Mastermind_v2
         {
             check_board("purple");
         }
+
+        private void check_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

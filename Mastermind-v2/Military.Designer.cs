@@ -39,6 +39,7 @@
             this.orangeDot = new System.Windows.Forms.PictureBox();
             this.redDot = new System.Windows.Forms.PictureBox();
             this.boardGrid = new System.Windows.Forms.TableLayoutPanel();
+            this.check = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.purpleDot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blueDot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.greenDot)).BeginInit();
@@ -165,6 +166,19 @@
             this.boardGrid.Size = new System.Drawing.Size(304, 584);
             this.boardGrid.TabIndex = 12;
             // 
+            // check
+            // 
+            this.check.BackColor = System.Drawing.Color.Black;
+            this.check.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check.ForeColor = System.Drawing.Color.White;
+            this.check.Location = new System.Drawing.Point(20, 775);
+            this.check.Name = "check";
+            this.check.Size = new System.Drawing.Size(150, 35);
+            this.check.TabIndex = 0;
+            this.check.Text = "Check";
+            this.check.UseVisualStyleBackColor = false;
+            this.check.Click += new System.EventHandler(this.check_Click);
+            // 
             // Military
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,6 +186,7 @@
             this.BackgroundImage = global::Mastermind_v2.Properties.Resources.mastermind_pic1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(423, 830);
+            this.Controls.Add(this.check);
             this.Controls.Add(this.boardGrid);
             this.Controls.Add(this.purpleDot);
             this.Controls.Add(this.blueDot);
@@ -206,5 +221,6 @@
         private System.Windows.Forms.PictureBox orangeDot;
         private System.Windows.Forms.PictureBox redDot;
         private System.Windows.Forms.TableLayoutPanel boardGrid;
+        private System.Windows.Forms.Button check;
     }
 }

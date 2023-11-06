@@ -19,7 +19,6 @@ namespace Mastermind_v2
         static void DisplayArray(string[] arr) => Console.WriteLine(string.Join(" ", arr));
 
         int val = 20;
-        bool guessChecked = false;
         public Military()
         {
             InitializeComponent();
@@ -55,7 +54,7 @@ namespace Mastermind_v2
 
         }
 
-        private void check_board(string colourButton)
+        private void fill_board(string colourButton)
         {
             var cell = new PictureBox();
 
@@ -102,41 +101,42 @@ namespace Mastermind_v2
                 currentColumn = 0;
                 currentRow++;
             }
+
         }
 
         private void redDot_Click(object sender, EventArgs e)
         {
-            check_board("red");
+            fill_board("red");
         }
 
         private void orangeDot_Click(object sender, EventArgs e)
         {
-            check_board("orange");
+            fill_board("orange");
         }
 
         private void yellowDot_Click(object sender, EventArgs e)
         {
-            check_board("yellow");
+            fill_board("yellow");
         }
 
         private void greenDot_Click(object sender, EventArgs e)
         {
-            check_board("green");
+            fill_board("green");
         }
 
         private void blueDot_Click(object sender, EventArgs e)
         {
-            check_board("blue");
+            fill_board("blue");
         }
 
         private void purpleDot_Click(object sender, EventArgs e)
         {
-            check_board("purple");
+            fill_board("purple");
         }
 
         private void check_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Checking Row now !!");
         }
     }
 }

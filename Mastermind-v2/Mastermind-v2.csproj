@@ -60,6 +60,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Rules.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,14 +79,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Rules.resx">
       <DependentUpon>Rules.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,25 +99,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\purple-circle-removebg-preview.png" />
+    <None Include="Resources\purple.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\blue-circle-removebg-preview.png" />
+    <None Include="Resources\blue.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\green-circle-removebg-preview.png" />
+    <None Include="Resources\green.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\orange-circle-removebg-preview %282%29.png" />
+    <None Include="Resources\orange.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\yellow-circle-removebg-preview.png" />
+    <None Include="Resources\yellow.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\red-circle-removebg-preview %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\red-circle-removebg-preview.png" />
+    <None Include="Resources\red.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1000_F_563697722_eKkTmLTNSgw7ztdZpNZqiPF1EEoA4IBw.jpg" />
@@ -133,6 +130,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mastermind-pic2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purple1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orange1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -63,19 +63,9 @@ namespace Mastermind_v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1000_F_563697722_eKkTmLTNSgw7ztdZpNZqiPF1EEoA4IBw {
+        internal static System.Drawing.Bitmap blue {
             get {
-                object obj = ResourceManager.GetObject("1000_F_563697722_eKkTmLTNSgw7ztdZpNZqiPF1EEoA4IBw", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap blue_circle_removebg_preview {
-            get {
-                object obj = ResourceManager.GetObject("blue-circle-removebg-preview", resourceCulture);
+                object obj = ResourceManager.GetObject("blue", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +83,9 @@ namespace Mastermind_v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap green_circle_removebg_preview {
+        internal static System.Drawing.Bitmap green {
             get {
-                object obj = ResourceManager.GetObject("green-circle-removebg-preview", resourceCulture);
+                object obj = ResourceManager.GetObject("green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +123,9 @@ namespace Mastermind_v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap orange_circle_removebg_preview__2_ {
+        internal static System.Drawing.Bitmap orange {
             get {
-                object obj = ResourceManager.GetObject("orange-circle-removebg-preview (2)", resourceCulture);
+                object obj = ResourceManager.GetObject("orange", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +133,9 @@ namespace Mastermind_v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap purple_circle_removebg_preview {
+        internal static System.Drawing.Bitmap purple {
             get {
-                object obj = ResourceManager.GetObject("purple-circle-removebg-preview", resourceCulture);
+                object obj = ResourceManager.GetObject("purple", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +143,9 @@ namespace Mastermind_v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap red_circle_removebg_preview {
+        internal static System.Drawing.Bitmap red {
             get {
-                object obj = ResourceManager.GetObject("red-circle-removebg-preview", resourceCulture);
+                object obj = ResourceManager.GetObject("red", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,19 +153,9 @@ namespace Mastermind_v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap red_circle_removebg_preview__2_ {
+        internal static System.Drawing.Bitmap yellow {
             get {
-                object obj = ResourceManager.GetObject("red-circle-removebg-preview (2)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap yellow_circle_removebg_preview {
-            get {
-                object obj = ResourceManager.GetObject("yellow-circle-removebg-preview", resourceCulture);
+                object obj = ResourceManager.GetObject("yellow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

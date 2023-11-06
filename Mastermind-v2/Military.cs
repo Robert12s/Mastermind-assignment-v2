@@ -18,7 +18,7 @@ namespace Mastermind_v2
         public int currentRow;
         static void DisplayArray(string[] arr) => Console.WriteLine(string.Join(" ", arr));
 
-        int val = 20;
+        int val = 30;
         public Military()
         {
             InitializeComponent();

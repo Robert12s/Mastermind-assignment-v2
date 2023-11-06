@@ -40,6 +40,15 @@
             this.redDot = new System.Windows.Forms.PictureBox();
             this.boardGrid = new System.Windows.Forms.TableLayoutPanel();
             this.check = new System.Windows.Forms.Button();
+            this.answerGrid = new System.Windows.Forms.TableLayoutPanel();
+            this.clueGrid1 = new System.Windows.Forms.TableLayoutPanel();
+            this.clueGrid2 = new System.Windows.Forms.TableLayoutPanel();
+            this.clueGrid3 = new System.Windows.Forms.TableLayoutPanel();
+            this.clueGrid4 = new System.Windows.Forms.TableLayoutPanel();
+            this.clueGrid5 = new System.Windows.Forms.TableLayoutPanel();
+            this.clueGrid6 = new System.Windows.Forms.TableLayoutPanel();
+            this.clueGrid7 = new System.Windows.Forms.TableLayoutPanel();
+            this.clueGrid8 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.purpleDot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blueDot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.greenDot)).BeginInit();
@@ -179,6 +188,133 @@
             this.check.UseVisualStyleBackColor = false;
             this.check.Click += new System.EventHandler(this.check_Click);
             // 
+            // answerGrid
+            // 
+            this.answerGrid.BackColor = System.Drawing.Color.Transparent;
+            this.answerGrid.ColumnCount = 4;
+            this.answerGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.answerGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.answerGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.answerGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.answerGrid.Location = new System.Drawing.Point(30, 30);
+            this.answerGrid.Name = "answerGrid";
+            this.answerGrid.RowCount = 1;
+            this.answerGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.answerGrid.Size = new System.Drawing.Size(184, 44);
+            this.answerGrid.TabIndex = 13;
+            // 
+            // clueGrid1
+            // 
+            this.clueGrid1.BackColor = System.Drawing.Color.Transparent;
+            this.clueGrid1.ColumnCount = 2;
+            this.clueGrid1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid1.Location = new System.Drawing.Point(336, 105);
+            this.clueGrid1.Name = "clueGrid1";
+            this.clueGrid1.RowCount = 2;
+            this.clueGrid1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid1.Size = new System.Drawing.Size(65, 65);
+            this.clueGrid1.TabIndex = 14;
+            // 
+            // clueGrid2
+            // 
+            this.clueGrid2.BackColor = System.Drawing.Color.Transparent;
+            this.clueGrid2.ColumnCount = 2;
+            this.clueGrid2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid2.Location = new System.Drawing.Point(336, 177);
+            this.clueGrid2.Name = "clueGrid2";
+            this.clueGrid2.RowCount = 2;
+            this.clueGrid2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid2.Size = new System.Drawing.Size(65, 65);
+            this.clueGrid2.TabIndex = 15;
+            // 
+            // clueGrid3
+            // 
+            this.clueGrid3.BackColor = System.Drawing.Color.Transparent;
+            this.clueGrid3.ColumnCount = 2;
+            this.clueGrid3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid3.Location = new System.Drawing.Point(336, 249);
+            this.clueGrid3.Name = "clueGrid3";
+            this.clueGrid3.RowCount = 2;
+            this.clueGrid3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid3.Size = new System.Drawing.Size(65, 65);
+            this.clueGrid3.TabIndex = 16;
+            // 
+            // clueGrid4
+            // 
+            this.clueGrid4.BackColor = System.Drawing.Color.Transparent;
+            this.clueGrid4.ColumnCount = 2;
+            this.clueGrid4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid4.Location = new System.Drawing.Point(336, 323);
+            this.clueGrid4.Name = "clueGrid4";
+            this.clueGrid4.RowCount = 2;
+            this.clueGrid4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid4.Size = new System.Drawing.Size(65, 65);
+            this.clueGrid4.TabIndex = 17;
+            // 
+            // clueGrid5
+            // 
+            this.clueGrid5.BackColor = System.Drawing.Color.Transparent;
+            this.clueGrid5.ColumnCount = 2;
+            this.clueGrid5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid5.Location = new System.Drawing.Point(336, 399);
+            this.clueGrid5.Name = "clueGrid5";
+            this.clueGrid5.RowCount = 2;
+            this.clueGrid5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid5.Size = new System.Drawing.Size(65, 65);
+            this.clueGrid5.TabIndex = 18;
+            // 
+            // clueGrid6
+            // 
+            this.clueGrid6.BackColor = System.Drawing.Color.Transparent;
+            this.clueGrid6.ColumnCount = 2;
+            this.clueGrid6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid6.Location = new System.Drawing.Point(336, 472);
+            this.clueGrid6.Name = "clueGrid6";
+            this.clueGrid6.RowCount = 2;
+            this.clueGrid6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid6.Size = new System.Drawing.Size(65, 65);
+            this.clueGrid6.TabIndex = 19;
+            // 
+            // clueGrid7
+            // 
+            this.clueGrid7.BackColor = System.Drawing.Color.Transparent;
+            this.clueGrid7.ColumnCount = 2;
+            this.clueGrid7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid7.Location = new System.Drawing.Point(336, 544);
+            this.clueGrid7.Name = "clueGrid7";
+            this.clueGrid7.RowCount = 2;
+            this.clueGrid7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid7.Size = new System.Drawing.Size(65, 65);
+            this.clueGrid7.TabIndex = 20;
+            // 
+            // clueGrid8
+            // 
+            this.clueGrid8.BackColor = System.Drawing.Color.Transparent;
+            this.clueGrid8.ColumnCount = 2;
+            this.clueGrid8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid8.Location = new System.Drawing.Point(336, 616);
+            this.clueGrid8.Name = "clueGrid8";
+            this.clueGrid8.RowCount = 2;
+            this.clueGrid8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.clueGrid8.Size = new System.Drawing.Size(65, 65);
+            this.clueGrid8.TabIndex = 21;
+            // 
             // Military
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,6 +322,15 @@
             this.BackgroundImage = global::Mastermind_v2.Properties.Resources.mastermind_pic1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(423, 830);
+            this.Controls.Add(this.clueGrid8);
+            this.Controls.Add(this.clueGrid7);
+            this.Controls.Add(this.clueGrid6);
+            this.Controls.Add(this.clueGrid5);
+            this.Controls.Add(this.clueGrid4);
+            this.Controls.Add(this.clueGrid3);
+            this.Controls.Add(this.clueGrid2);
+            this.Controls.Add(this.clueGrid1);
+            this.Controls.Add(this.answerGrid);
             this.Controls.Add(this.check);
             this.Controls.Add(this.boardGrid);
             this.Controls.Add(this.purpleDot);
@@ -222,5 +367,14 @@
         private System.Windows.Forms.PictureBox redDot;
         private System.Windows.Forms.TableLayoutPanel boardGrid;
         private System.Windows.Forms.Button check;
+        private System.Windows.Forms.TableLayoutPanel answerGrid;
+        private System.Windows.Forms.TableLayoutPanel clueGrid1;
+        private System.Windows.Forms.TableLayoutPanel clueGrid2;
+        private System.Windows.Forms.TableLayoutPanel clueGrid3;
+        private System.Windows.Forms.TableLayoutPanel clueGrid4;
+        private System.Windows.Forms.TableLayoutPanel clueGrid5;
+        private System.Windows.Forms.TableLayoutPanel clueGrid6;
+        private System.Windows.Forms.TableLayoutPanel clueGrid7;
+        private System.Windows.Forms.TableLayoutPanel clueGrid8;
     }
 }

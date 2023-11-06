@@ -14,16 +14,15 @@ namespace Mastermind_v2
     {
         static void DisplayArray(string[] arr) => Console.WriteLine(string.Join(" ", arr));
 
+        int val = 20;
         public Military()
         {
             InitializeComponent();
+            timer.Start();
         }
-        int timeleft = 20;
 
         private void Military_Load(object sender, EventArgs e)
         {
-            timer.Start();
-            countdownTimer.Text = timeleft.ToString();
             string[] colourArray = { "red", "orange", "yellow", "green", "blue", "purple" };
             Random rondo = new Random();
             string[] answer = new string[5];
@@ -40,21 +39,15 @@ namespace Mastermind_v2
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            if(timeleft > 0)
+            int timeLeft = val--;
+            countdownTimer.Text = timeLeft.ToString();
+            if (timeLeft == 0)
             {
-                timeleft = timeleft - 1;
-                countdownTimer.Text = timeleft.ToString();
                 gameOver newform = new gameOver();
                 this.Close();
                 newform.ShowDialog();
+            }
 
-            }
-            else
-            {
-                timer.Stop();
-                Enabled = false;
-            }
-            
         }
     }
 }

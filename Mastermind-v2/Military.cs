@@ -165,44 +165,41 @@ namespace Mastermind_v2
         }
 
         private void checkGuess()
-        {
-            Tuple<int, int> EvaluateGuess(string[] answer, string[] guessArray)
+        { 
+            int exactMatches = 0;
+            int colourMatches = 0;
+
+            var answerList = answer.ToList();
+            var remainingAnswer = new List<string>();
+            var remainingGuess = new List<string>();
+
+            // Count the exact matches and find the remaining elements
+            for (int i = 0; i < answer.Length; i++)
             {
-                int exactMatches = 0;
-                int colorMatches = 0;
-
-                Dictionary<string, int> answerCounts = new Dictionary<string, int>();
-                Dictionary<string, int> guessArrayCounts = new Dictionary<string, int>();
-
-                // First, count the exact matches
-                for (int i = 0; i < answer.Length; i++)
+                if (answer[i] == guessArray[i])
                 {
-                    if (answer[i] == guessArray[i])
-                    {
-                        exactMatches++;
-                    }
+                    exactMatches++;
                 }
-
-                // Then, count the color matches (ignoring exact matches)
-                for (int i = 0; i < answer.Length; i++)
+                else
                 {
-                    if (answer[i] != guessArray[i])
-                    {
-                        answerCounts[answer[i]] = answerCounts.GetValueOrDefault(answer[i], 0) + 1;
-                       guessArrayCounts[guessArray[i]] = guessArrayCounts.GetValueOrDefault(guessArray[i], 0) + 1;
-                    }
+                    remainingAnswer.Add(answer[i]);
+                    remainingGuess.Add(guessArray[i]);
                 }
-
-                foreach (var colour in guessArrayCounts.Keys)
-                {
-                    if (answerCounts.ContainsKey(colour))
-                    {
-                        colorMatches += Math.Min(guessArrayCounts[colour], answerCounts[colour]);
-                    }
-                }
-
-                return Tuple.Create(exactMatches, colorMatches);
             }
+
+            // Count the color matches (ignoring exact matches)
+            for (int i = 0; i < remainingGuess.Count; i++)
+            {
+                if (remainingAnswer.Contains(remainingGuess[i]))
+                {
+                    colourMatches++;
+                    remainingGuess.Remove(remainingGuess[i]);
+                }
+            }
+
+            Console.WriteLine("The exact matches are" + exactMatches);
+            Console.WriteLine("The colour matches are" + colourMatches);
+
         }
         
         private void winGame()

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO.Pipes;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -14,8 +15,10 @@ namespace Mastermind_v2
 {
     public partial class Military : Form
     {
-        public int currentColumn;
-        public int currentRow;
+        public int currentColumn = 0;
+        public int currentRow = 0;
+        public string[] guessArray = new string[4];
+        public string[] answer = new string[4];
         static void DisplayArray(string[] arr) => Console.WriteLine(string.Join(" ", arr));
 
         int val = 30;
@@ -29,7 +32,6 @@ namespace Mastermind_v2
         {
             string[] colourArray = { "red", "orange", "yellow", "green", "blue", "purple" };
             Random rondo = new Random();
-            string[] answer = new string[5];
 
             for (int i = 0; i < 4; i++)
             {
@@ -56,51 +58,63 @@ namespace Mastermind_v2
 
         private void fill_board(string colourButton)
         {
-            var cell = new PictureBox();
-
-            cell.Dock = DockStyle.Fill;
-            cell.Padding = new Padding();
-            cell.Margin = new Padding(9,4,9,12);
-
-            switch (colourButton)
+            if (currentColumn != 4)
             {
-                case "red":
-                    cell.BackgroundImage = Resources.red;
-                    break;
+                var cell = new PictureBox();
 
-                case "orange":
-                    cell.BackgroundImage = Resources.orange;
-                    break;
+                cell.Dock = DockStyle.Fill;
+                cell.Padding = new Padding();
+                cell.Margin = new Padding(9, 4, 9, 12);
 
-                case "yellow":
-                    cell.BackgroundImage = Resources.yellow;
-                    break;
+                switch (colourButton)
+                {
+                    case "red":
+                        cell.BackgroundImage = Resources.red;
+                        guessArray[currentColumn] = colourButton;
+                        break;
 
-                case "green":
-                    cell.BackgroundImage = Resources.green;
-                    break;
+                    case "orange":
+                        cell.BackgroundImage = Resources.orange;
+                        guessArray[currentColumn] = colourButton;
+                        break;
 
-                case "blue":
-                    cell.BackgroundImage = Resources.blue;
-                    break;
+                    case "yellow":
+                        cell.BackgroundImage = Resources.yellow;
+                        guessArray[currentColumn] = colourButton;
+                        break;
 
-                case "purple":
-                    cell.BackgroundImage = Resources.purple;
-                    break;
+                    case "green":
+                        cell.BackgroundImage = Resources.green;
+                        guessArray[currentColumn] = colourButton;
+                        break;
+
+                    case "blue":
+                        cell.BackgroundImage = Resources.blue;
+                        guessArray[currentColumn] = colourButton;
+                        break;
+
+                    case "purple":
+                        cell.BackgroundImage = Resources.purple;
+                        guessArray[currentColumn] = colourButton;
+                        break;
+                }
+
+                cell.BackgroundImageLayout = ImageLayout.Stretch;
+
+                boardGrid.Controls.Add(cell, currentColumn, currentRow);
+
+                currentColumn++;
+
             }
 
-            cell.BackgroundImageLayout = ImageLayout.Stretch;
-
-            boardGrid.Controls.Add(cell, currentColumn, currentRow);
-
-            if (currentColumn < 4)
+            /*if (currentColumn < 4)
             {
                 currentColumn++;
             }
             else {
                 currentColumn = 0;
                 currentRow++;
-            }
+            }*/
 
         }
 
@@ -136,7 +150,77 @@ namespace Mastermind_v2
 
         private void check_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Checking Row now !!");
+           if (currentColumn == 4)
+            {
+                if (answer.SequenceEqual(guessArray))
+                {
+                    timer.Stop();
+                    winGame();
+                    MessageBox.Show("win");
+                } else
+                {
+                    checkGuess();
+                    MessageBox.Show("Guess Incorrect, please try again.");
+                    currentColumn = 0;
+                    currentRow++;
+                    if (currentRow == 8)
+                    {
+                        gameOver newform = new gameOver();
+                        this.Close();
+                        newform.ShowDialog();
+                    }
+                }
+
+            }
+        }
+
+        private void checkGuess()
+        {
+
+        }
+        
+        private void winGame()
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                var cell = new PictureBox();
+
+                cell.Dock = DockStyle.Fill;
+                cell.Padding = new Padding();
+                cell.Margin = new Padding(4, 4, 4, 5);
+
+                switch (answer[i])
+                {
+                    case "red":
+                        cell.BackgroundImage = Resources.red;
+                        break;
+
+                    case "orange":
+                        cell.BackgroundImage = Resources.orange;
+                        break;
+
+                    case "yellow":
+                        cell.BackgroundImage = Resources.yellow;
+                        break;
+
+                    case "green":
+                        cell.BackgroundImage = Resources.green;
+                        break;
+
+                    case "blue":
+                        cell.BackgroundImage = Resources.blue;
+                        break;
+
+                    case "purple":
+                        cell.BackgroundImage = Resources.purple;
+                        break;
+                }
+
+                cell.BackgroundImageLayout = ImageLayout.Stretch;
+
+                answerGrid.Controls.Add(cell, i, 0);
+
+            }
         }
     }
 }

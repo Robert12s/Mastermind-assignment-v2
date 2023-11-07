@@ -192,15 +192,15 @@
             // 
             this.answerGrid.BackColor = System.Drawing.Color.Transparent;
             this.answerGrid.ColumnCount = 4;
-            this.answerGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 46F));
-            this.answerGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 46F));
-            this.answerGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 46F));
-            this.answerGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 46F));
-            this.answerGrid.Location = new System.Drawing.Point(30, 30);
+            this.answerGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.answerGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.answerGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.answerGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.answerGrid.Location = new System.Drawing.Point(38, 30);
             this.answerGrid.Name = "answerGrid";
             this.answerGrid.RowCount = 1;
             this.answerGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.answerGrid.Size = new System.Drawing.Size(184, 44);
+            this.answerGrid.Size = new System.Drawing.Size(176, 44);
             this.answerGrid.TabIndex = 13;
             // 
             // clueGrid1

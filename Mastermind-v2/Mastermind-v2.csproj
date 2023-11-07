@@ -52,6 +52,12 @@
     <Compile Include="gameOver.Designer.cs">
       <DependentUpon>gameOver.cs</DependentUpon>
     </Compile>
+    <Compile Include="gameWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gameWin.Designer.cs">
+      <DependentUpon>gameWin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Military.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     </Compile>
     <EmbeddedResource Include="gameOver.resx">
       <DependentUpon>gameOver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gameWin.resx">
+      <DependentUpon>gameWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Military.resx">
       <DependentUpon>Military.cs</DependentUpon>
@@ -151,6 +160,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\red1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mission-complete-stamp-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

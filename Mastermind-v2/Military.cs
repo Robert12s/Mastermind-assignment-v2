@@ -19,9 +19,11 @@ namespace Mastermind_v2
         public int currentRow = 0;
         public string[] guessArray = new string[4];
         public string[] answer = new string[4];
+        public int exactMatches = 0;
+        public int colourMatches = 0;
         static void DisplayArray(string[] arr) => Console.WriteLine(string.Join(" ", arr));
 
-        int val = 30;
+        int val = 50;
         public Military()
         {
             InitializeComponent();
@@ -146,10 +148,13 @@ namespace Mastermind_v2
                 {
                     timer.Stop();
                     winGame();
-                    MessageBox.Show("win");
+                    gameWin newform = new gameWin();
+                    this.Close();
+                    newform.ShowDialog();
                 } else
                 {
                     checkGuess();
+                    plotClueDots();
                     MessageBox.Show("Guess Incorrect, please try again.");
                     currentColumn = 0;
                     currentRow++;
@@ -166,9 +171,6 @@ namespace Mastermind_v2
 
         private void checkGuess()
         { 
-            int exactMatches = 0;
-            int colourMatches = 0;
-
             var answerList = answer.ToList();
             var remainingAnswer = new List<string>();
             var remainingGuess = new List<string>();
@@ -197,11 +199,70 @@ namespace Mastermind_v2
                 }
             }
 
-            Console.WriteLine("The exact matches are" + exactMatches);
-            Console.WriteLine("The colour matches are" + colourMatches);
+            Console.WriteLine("The exact matches are " + exactMatches);
+            Console.WriteLine("The colour matches are " + colourMatches);
 
         }
-        
+
+        private void plotClueDots()
+        {
+            string currentClueGrid = currentRow.ToString();
+            int currentClueColumn = 0;
+            int currentClueRow = 0;
+
+            switch (currentClueGrid)
+            {
+                case "0":
+                    currentClueGrid = "clueGrid1";
+                    break;
+                case "1":
+                    currentClueGrid = "clueGrid2";
+                    break;
+                case "2":
+                    currentClueGrid = "clueGrid3";
+                    break;
+                case "3":
+                    currentClueGrid = "clueGrid4";
+                    break;
+                case "4":
+                    currentClueGrid = "clueGrid5";
+                    break;
+                case "5":
+                    currentClueGrid = "clueGrid6";
+                    break;
+                case "6":
+                    currentClueGrid = "clueGrid7";
+                    break;
+                case "7":
+                    currentClueGrid = "clueGrid8";
+                    break;
+            }
+
+            var cell = new PictureBox();
+
+            cell.Dock = DockStyle.Fill;
+            cell.Padding = new Padding();
+            cell.Margin = new Padding(9, 4, 9, 12);
+
+            for (int i = 0;i < exactMatches; i++)
+            {
+                cell.BackgroundImage = Resources.black;
+            }
+
+            for (int i = 0; i < colourMatches; i++)
+            {
+                cell.BackgroundImage = Resources.white;
+            }
+
+            cell.BackgroundImageLayout = ImageLayout.Stretch;
+
+            currentClueGrid.Controls.Add(cell, currentClueColumn, currentClueRow);
+
+            currentClueColumn++;
+            currentClueRow++;
+        }
+
+
         private void winGame()
         {
             for (int i = 0; i < 4; i++)

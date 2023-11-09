@@ -23,7 +23,7 @@ namespace Mastermind_v2
         public int colourMatches = 0;
         static void DisplayArray(string[] arr) => Console.WriteLine(string.Join(" ", arr));
 
-        int val = 50;
+        int val = 200;
         public Military()
         {
             InitializeComponent();
@@ -175,6 +175,9 @@ namespace Mastermind_v2
             var remainingAnswer = new List<string>();
             var remainingGuess = new List<string>();
 
+            for (var i = 0; i < answerList.Count(); i++) { Console.WriteLine(answerList[i]);};
+            DisplayArray(guessArray);
+
             // Count the exact matches and find the remaining elements
             for (int i = 0; i < answer.Length; i++)
             {
@@ -187,7 +190,10 @@ namespace Mastermind_v2
                     remainingAnswer.Add(answer[i]);
                     remainingGuess.Add(guessArray[i]);
                 }
+                Console.WriteLine("The exact matches so far are " + exactMatches);
             }
+            for (var i = 0; i < remainingAnswer.Count(); i++) { Console.WriteLine("remaining answer list after exact matches " + remainingAnswer[i]); };
+            for (var i = 0; i < remainingGuess.Count(); i++) { Console.WriteLine("remaining guess list after exact matches" + remainingGuess[i]); };
 
             // Count the color matches (ignoring exact matches)
             for (int i = 0; i < remainingGuess.Count; i++)
@@ -196,6 +202,7 @@ namespace Mastermind_v2
                 {
                     colourMatches++;
                     remainingGuess.Remove(remainingGuess[i]);
+                    Console.WriteLine("The colour matches so far are " + colourMatches);
                 }
             }
 
@@ -206,57 +213,54 @@ namespace Mastermind_v2
 
         private void plotClueDots()
         {
-            string currentClueGrid = currentRow.ToString();
             int currentClueColumn = 0;
             int currentClueRow = 0;
-
-            switch (currentClueGrid)
-            {
-                case "0":
-                    currentClueGrid = "clueGrid1";
-                    break;
-                case "1":
-                    currentClueGrid = "clueGrid2";
-                    break;
-                case "2":
-                    currentClueGrid = "clueGrid3";
-                    break;
-                case "3":
-                    currentClueGrid = "clueGrid4";
-                    break;
-                case "4":
-                    currentClueGrid = "clueGrid5";
-                    break;
-                case "5":
-                    currentClueGrid = "clueGrid6";
-                    break;
-                case "6":
-                    currentClueGrid = "clueGrid7";
-                    break;
-                case "7":
-                    currentClueGrid = "clueGrid8";
-                    break;
-            }
 
             var cell = new PictureBox();
 
             cell.Dock = DockStyle.Fill;
             cell.Padding = new Padding();
-            cell.Margin = new Padding(9, 4, 9, 12);
+            cell.Margin = new Padding(4, 4, 4, 4);
 
-            for (int i = 0;i < exactMatches; i++)
+            for (int i = 0; i < exactMatches; i++)
             {
                 cell.BackgroundImage = Resources.black;
             }
 
             for (int i = 0; i < colourMatches; i++)
             {
-                cell.BackgroundImage = Resources.white;
+                cell.BackgroundImage = Resources.pink;
             }
 
             cell.BackgroundImageLayout = ImageLayout.Stretch;
 
-            currentClueGrid.Controls.Add(cell, currentClueColumn, currentClueRow);
+            switch (currentRow)
+            {
+                case 0:
+                    clueGrid1.Controls.Add(cell, currentClueColumn, currentClueRow);
+                    break;
+                case 1:
+                    clueGrid2.Controls.Add(cell, currentClueColumn, currentClueRow);
+                    break;
+                case 2:
+                    clueGrid3.Controls.Add(cell, currentClueColumn, currentClueRow);
+                    break;
+                case 3:
+                    clueGrid4.Controls.Add(cell, currentClueColumn, currentClueRow);
+                    break;
+                case 4:
+                    clueGrid5.Controls.Add(cell, currentClueColumn, currentClueRow);
+                    break;
+                case 5:
+                    clueGrid6.Controls.Add(cell, currentClueColumn, currentClueRow);
+                    break;
+                case 6:
+                    clueGrid7.Controls.Add(cell, currentClueColumn, currentClueRow);
+                    break;
+                case 7:
+                    clueGrid8.Controls.Add(cell, currentClueColumn, currentClueRow);
+                    break;
+            }
 
             currentClueColumn++;
             currentClueRow++;

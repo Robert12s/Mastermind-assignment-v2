@@ -123,7 +123,7 @@
   <data name="label3.Text" xml:space="preserve">
     <value>You will have six colours to chose from and have eight attempts to guess the four colour code. If succesfull the bomb will be defused and you will win. If you run out of time or use up all the guesses you will lose.
 
-After each guess you will revcieve clues about how close your guess was, by using white or black dots. Foreach black dot it means you have one colour in the correct place and for every white dot you have a correct coulour but in the wrong place.
+After each guess you will revcieve clues about how close your guess was, by using pink or black dots. Foreach black dot it means you have one colour in the correct place and for every pink dot you have a correct colour but in the wrong place.
  </value>
   </data>
   <data name="label5.Text" xml:space="preserve">

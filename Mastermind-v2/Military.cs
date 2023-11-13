@@ -192,9 +192,10 @@ namespace Mastermind_v2
             {
                 for (int j = 0; j < answer.Length; j++)
                 {
-                    if (answer[j] == guessArray[i])
+                    if (answer[j] == guessArray[i] && answer[i] != guessArray[i])
                     {
                         colourMatches++;
+                        break;
                     }
                 }
             }

@@ -21,11 +21,11 @@ namespace Mastermind_v2
         public string[] answer = new string[4];
         static void DisplayArray(string[] arr) => Console.WriteLine(string.Join(" ", arr));
 
-        int val = 400;
-        public Military()
+        int val = 1;
+        public Military() 
         {
             InitializeComponent();
-            timer.Start();
+            timer.Start(); // starts the timer
         }
 
         private void Military_Load(object sender, EventArgs e)
@@ -36,14 +36,14 @@ namespace Mastermind_v2
             for (int i = 0; i < 4; i++)
             {
                 int num = rondo.Next(0, 6);
-                answer[i] = colourArray[num];
+                answer[i] = colourArray[num]; // creates a random array of 4 colours
                  
             }
             DisplayArray(answer);
 
         }
 
-        private void timer_Tick(object sender, EventArgs e)
+        private void timer_Tick(object sender, EventArgs e) // this function allows the timer to work
         {
             int timeLeft = val--;
             countdownTimer.Text = timeLeft.ToString();
@@ -57,7 +57,7 @@ namespace Mastermind_v2
 
         }
 
-        private void fill_board(string colourButton)
+        private void fill_board(string colourButton) // Places the users guesses on the board
         {
             if (currentColumn != 4)
             {
@@ -143,7 +143,7 @@ namespace Mastermind_v2
         {
            if (currentColumn == 4)
             {
-                if (answer.SequenceEqual(guessArray))
+                if (answer.SequenceEqual(guessArray)) // checks if the users guess is exactly correct
                 {
                     timer.Stop();
                     var returnTuple = checkGuess();
@@ -165,7 +165,7 @@ namespace Mastermind_v2
                     if (currentRow == 8)
                     {
                         RevealAnswer();
-                        gameOver newform = new gameOver();
+                        gameOver newform = new gameOver(); // mission failed form
                         this.Close();
                         newform.ShowDialog();
                     }
@@ -209,7 +209,7 @@ namespace Mastermind_v2
 
         }
 
-        private void plotClueDots(int exactMatches, int colourMatches)
+        private void plotClueDots(int exactMatches, int colourMatches) // Plots the black and pink pegs depending on the users guess
         {
             int currentClueColumn = 0;
             int currentClueRow = 0;
@@ -313,7 +313,7 @@ namespace Mastermind_v2
             }   
         }
 
-        private void RevealAnswer()
+        private void RevealAnswer() // reveals answer in the top left hand corner of the board
         {
             for (int i = 0; i < 4; i++)
             {

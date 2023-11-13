@@ -49,6 +49,7 @@ namespace Mastermind_v2
             countdownTimer.Text = timeLeft.ToString();
             if (timeLeft == 0)
             {
+                RevealAnswer();
                 gameOver newform = new gameOver();
                 this.Close();
                 newform.ShowDialog();
@@ -159,11 +160,11 @@ namespace Mastermind_v2
                     var exactMatches = returnTuple.Item1;
                     var colourMatches = returnTuple.Item2;
                     plotClueDots(exactMatches, colourMatches);
-                    RevealAnswer();
                     currentColumn = 0;
                     currentRow++;
                     if (currentRow == 8)
                     {
+                        RevealAnswer();
                         gameOver newform = new gameOver();
                         this.Close();
                         newform.ShowDialog();

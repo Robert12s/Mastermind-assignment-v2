@@ -149,7 +149,7 @@ namespace Mastermind_v2
                     var exactMatches = returnTuple.Item1;
                     var colourMatches = returnTuple.Item2;
                     plotClueDots(exactMatches, colourMatches);
-                    winGame();
+                    RevealAnswer();
                     gameWin newform = new gameWin();
                     newform.ShowDialog();
                 } else
@@ -159,6 +159,7 @@ namespace Mastermind_v2
                     var exactMatches = returnTuple.Item1;
                     var colourMatches = returnTuple.Item2;
                     plotClueDots(exactMatches, colourMatches);
+                    RevealAnswer();
                     currentColumn = 0;
                     currentRow++;
                     if (currentRow == 8)
@@ -311,8 +312,7 @@ namespace Mastermind_v2
             }   
         }
 
-
-        private void winGame()
+        private void RevealAnswer()
         {
             for (int i = 0; i < 4; i++)
             {

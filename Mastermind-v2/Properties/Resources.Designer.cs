@@ -113,26 +113,6 @@ namespace Mastermind_v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap mastermind_pic1 {
-            get {
-                object obj = ResourceManager.GetObject("mastermind-pic1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap mastermind_pic2 {
-            get {
-                object obj = ResourceManager.GetObject("mastermind-pic2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap mission_complete_stamp_png {
             get {
                 object obj = ResourceManager.GetObject("mission-complete-stamp-png", resourceCulture);

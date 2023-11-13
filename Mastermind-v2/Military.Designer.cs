@@ -319,7 +319,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Mastermind_v2.Properties.Resources.mastermind_pic1;
+            this.BackgroundImage = global::Mastermind_v2.Properties.Resources.mastermind_pic;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(423, 830);
             this.Controls.Add(this.clueGrid8);

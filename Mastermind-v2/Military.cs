@@ -21,7 +21,7 @@ namespace Mastermind_v2
         public string[] answer = new string[4];
         static void DisplayArray(string[] arr) => Console.WriteLine(string.Join(" ", arr));
 
-        int val = 200;
+        int val = 400;
         public Military()
         {
             InitializeComponent();

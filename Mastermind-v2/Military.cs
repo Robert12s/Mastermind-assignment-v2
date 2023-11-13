@@ -186,13 +186,13 @@ namespace Mastermind_v2
                 }
 
             }
-
+            
             // Count the color matches (ignoring the exact matches)
             for (int i = 0; i < guessArray.Length; i++)
             {
                 for (int j = 0; j < answer.Length; j++)
                 {
-                    if (answer[j] == guessArray[i] && answer[i] != guessArray[i])
+                    if (answer[j] == guessArray[i])
                     {
                         colourMatches++;
                     }

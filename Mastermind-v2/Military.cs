@@ -19,8 +19,6 @@ namespace Mastermind_v2
         public int currentRow = 0;
         public string[] guessArray = new string[4];
         public string[] answer = new string[4];
-        public int exactMatches = 0;
-        public int colourMatches = 0;
         static void DisplayArray(string[] arr) => Console.WriteLine(string.Join(" ", arr));
 
         int val = 200;
@@ -147,15 +145,20 @@ namespace Mastermind_v2
                 if (answer.SequenceEqual(guessArray))
                 {
                     timer.Stop();
+                    var returnTuple = checkGuess();
+                    var exactMatches = returnTuple.Item1;
+                    var colourMatches = returnTuple.Item2;
+                    plotClueDots(exactMatches, colourMatches);
                     winGame();
                     gameWin newform = new gameWin();
-                    this.Close();
                     newform.ShowDialog();
                 } else
                 {
-                    checkGuess();
-                    plotClueDots();
-                    MessageBox.Show("Guess Incorrect, please try again.");
+
+                    var returnTuple = checkGuess();
+                    var exactMatches = returnTuple.Item1;
+                    var colourMatches = returnTuple.Item2;
+                    plotClueDots(exactMatches, colourMatches);
                     currentColumn = 0;
                     currentRow++;
                     if (currentRow == 8)
@@ -167,17 +170,13 @@ namespace Mastermind_v2
                 }
 
             }
+            
         }
 
-        private void checkGuess()
-        { 
-            var answerList = answer.ToList();
-            var remainingAnswer = new List<string>();
-            var remainingGuess = new List<string>();
-
-            for (var i = 0; i < answerList.Count(); i++) { Console.WriteLine(answerList[i]);};
-            DisplayArray(guessArray);
-
+        private Tuple<int, int> checkGuess()
+        {
+            int exactMatches = 0;
+            int colourMatches = 0;
             // Count the exact matches and find the remaining elements
             for (int i = 0; i < answer.Length; i++)
             {
@@ -185,85 +184,130 @@ namespace Mastermind_v2
                 {
                     exactMatches++;
                 }
-                else
-                {
-                    remainingAnswer.Add(answer[i]);
-                    remainingGuess.Add(guessArray[i]);
-                }
-                Console.WriteLine("The exact matches so far are " + exactMatches);
-            }
-            for (var i = 0; i < remainingAnswer.Count(); i++) { Console.WriteLine("remaining answer list after exact matches " + remainingAnswer[i]); };
-            for (var i = 0; i < remainingGuess.Count(); i++) { Console.WriteLine("remaining guess list after exact matches" + remainingGuess[i]); };
 
-            // Count the color matches (ignoring exact matches)
-            for (int i = 0; i < remainingGuess.Count; i++)
+            }
+
+            // Count the color matches (ignoring the exact matches)
+            for (int i = 0; i < guessArray.Length; i++)
             {
-                if (remainingAnswer.Contains(remainingGuess[i]))
+                for (int j = 0; j < answer.Length; j++)
                 {
-                    colourMatches++;
-                    remainingGuess.Remove(remainingGuess[i]);
-                    Console.WriteLine("The colour matches so far are " + colourMatches);
+                    if (answer[j] == guessArray[i] && answer[i] != guessArray[i])
+                    {
+                        colourMatches++;
+                    }
                 }
             }
 
             Console.WriteLine("The exact matches are " + exactMatches);
             Console.WriteLine("The colour matches are " + colourMatches);
 
+            return Tuple.Create(exactMatches, colourMatches) as Tuple<int, int>;
+
         }
 
-        private void plotClueDots()
+        private void plotClueDots(int exactMatches, int colourMatches)
         {
             int currentClueColumn = 0;
             int currentClueRow = 0;
 
-            var cell = new PictureBox();
-
-            cell.Dock = DockStyle.Fill;
-            cell.Padding = new Padding();
-            cell.Margin = new Padding(4, 4, 4, 4);
-
             for (int i = 0; i < exactMatches; i++)
             {
+                var cell = new PictureBox();
+
+                cell.Dock = DockStyle.Fill;
+                cell.Padding = new Padding();
+                cell.Margin = new Padding(4, 4, 4, 4);
+                cell.BackgroundImageLayout = ImageLayout.Stretch;
                 cell.BackgroundImage = Resources.black;
+
+                switch (currentRow)
+                {
+                    case 0:
+                        clueGrid1.Controls.Add(cell, currentClueColumn, currentClueRow);
+                        break;
+                    case 1:
+                        clueGrid2.Controls.Add(cell, currentClueColumn, currentClueRow);
+                        break;
+                    case 2:
+                        clueGrid3.Controls.Add(cell, currentClueColumn, currentClueRow);
+                        break;
+                    case 3:
+                        clueGrid4.Controls.Add(cell, currentClueColumn, currentClueRow);
+                        break;
+                    case 4:
+                        clueGrid5.Controls.Add(cell, currentClueColumn, currentClueRow);
+                        break;
+                    case 5:
+                        clueGrid6.Controls.Add(cell, currentClueColumn, currentClueRow);
+                        break;
+                    case 6:
+                        clueGrid7.Controls.Add(cell, currentClueColumn, currentClueRow);
+                        break;
+                    case 7:
+                        clueGrid8.Controls.Add(cell, currentClueColumn, currentClueRow);
+                        break;
+                }
+
+                if (currentClueColumn == 1)
+                {
+                    currentClueRow++;
+                    currentClueColumn = 0;
+                }
+                else
+                {
+                    currentClueColumn++;
+                }
+
             }
 
             for (int i = 0; i < colourMatches; i++)
             {
+                var cell = new PictureBox();
+
+                cell.Dock = DockStyle.Fill;
+                cell.Padding = new Padding();
+                cell.Margin = new Padding(4, 4, 4, 4);
+                cell.BackgroundImageLayout = ImageLayout.Stretch;
                 cell.BackgroundImage = Resources.pink;
-            }
+                switch (currentRow)
+                {
+                    case 0:
+                        clueGrid1.Controls.Add(cell, currentClueColumn, currentClueRow);
+                        break;
+                    case 1:
+                        clueGrid2.Controls.Add(cell, currentClueColumn, currentClueRow);
+                        break;
+                    case 2:
+                        clueGrid3.Controls.Add(cell, currentClueColumn, currentClueRow);
+                        break;
+                    case 3:
+                        clueGrid4.Controls.Add(cell, currentClueColumn, currentClueRow);
+                        break;
+                    case 4:
+                        clueGrid5.Controls.Add(cell, currentClueColumn, currentClueRow);
+                        break;
+                    case 5:
+                        clueGrid6.Controls.Add(cell, currentClueColumn, currentClueRow);
+                        break;
+                    case 6:
+                        clueGrid7.Controls.Add(cell, currentClueColumn, currentClueRow);
+                        break;
+                    case 7:
+                        clueGrid8.Controls.Add(cell, currentClueColumn, currentClueRow);
+                        break;
+                }
 
-            cell.BackgroundImageLayout = ImageLayout.Stretch;
-
-            switch (currentRow)
-            {
-                case 0:
-                    clueGrid1.Controls.Add(cell, currentClueColumn, currentClueRow);
-                    break;
-                case 1:
-                    clueGrid2.Controls.Add(cell, currentClueColumn, currentClueRow);
-                    break;
-                case 2:
-                    clueGrid3.Controls.Add(cell, currentClueColumn, currentClueRow);
-                    break;
-                case 3:
-                    clueGrid4.Controls.Add(cell, currentClueColumn, currentClueRow);
-                    break;
-                case 4:
-                    clueGrid5.Controls.Add(cell, currentClueColumn, currentClueRow);
-                    break;
-                case 5:
-                    clueGrid6.Controls.Add(cell, currentClueColumn, currentClueRow);
-                    break;
-                case 6:
-                    clueGrid7.Controls.Add(cell, currentClueColumn, currentClueRow);
-                    break;
-                case 7:
-                    clueGrid8.Controls.Add(cell, currentClueColumn, currentClueRow);
-                    break;
-            }
-
-            currentClueColumn++;
-            currentClueRow++;
+                if (currentClueColumn == 1)
+                {
+                    currentClueRow++;
+                    currentClueColumn = 0;
+                }
+                else
+                {
+                    currentClueColumn++;
+                }
+            }   
         }
 
 
